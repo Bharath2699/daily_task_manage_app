@@ -26,40 +26,43 @@ const TaskForm=(props)=>{
     }
 
     return(
-        <form className="w-[85%] h-[90%]" onSubmit={handleSubmit}>
+        <form className="md:w-[85%] md:h-[90%] flex flex-col sm:justify-around" onSubmit={handleSubmit}>
             <div className="flex flex-row justify-start m-1" >
-                 <label className="font-serif font-bold text-1xl mr-10" id="title">Title : </label>
+                 <label className="font-serif font-bold md:text-1xl text-[12px] md:mr-10 mr-2" id="title">Title : </label>
                             <input 
-                            className="font-serif font-bold text-1xl bg-white shadow-sm border-spacing-2"
+                            className="font-serif font-bold md:text-1xltext-[12px] bg-white shadow-2xl md:border-spacing-2"
                             value={title}
                             onChange={(e)=>setTitle(e.target.value)}
                             type="text"
                             htmlFor="title"
+                            required
                             />
             </div>
             <div className="flex flex-row justify-start m-1">
-            <label className="font-serif font-bold text-1xl mr-10" id="description">Description :</label>
+            <label className="font-serif font-bold md:text-1xl text-[12px] mr-10" id="description">Description :</label>
                             <textarea
-                            className="font-serif font-bold text-1xl bg-white shadow-sm border-spacing-2"
+                            className="font-serif font-bold md:w-[80%] md:text-1xl text-[12px] bg-white shadow-2xl border-spacing-2"
                             value={description}
                             onChange={(e)=>setDescription(e.target.value)}
                             htmlFor="description"
+                            required
                             ></textarea>
             </div>
             <div className="flex flex-row justify-start m-1">
-            <label className="font-serif font-bold text-1xl mr-10" id="dueDate">Due Date :</label>
+            <label className="font-serif font-bold md:text-1xl text-[12px] mr-10" id="dueDate">Due Date :</label>
                             <input
-                            className="font-serif font-bold text-1xl bg-white shadow-sm border-spacing-2"
+                            className="font-serif font-bold md:text-1xl text-[12px] bg-white shadow-2xl border-spacing-2"
                             type="date"
                             value={dueDate}
                             onChange={(e)=>setDueDate(e.target.value)}
                             htmlFor="dueDate"
+                            required
                             />
             </div>
             <div className="flex flex-row justify-start m-1">
-            <label  className="font-serif font-bold text-1xl mr-10" id="status">Status : </label>
+            <label  className="font-serif font-bold md:text-1xl text-[12px] mr-10" id="status">Status : </label>
                             <select htmlFor="status" 
-                            className="font-serif font-bold text-1xl bg-white shadow-sm border-spacing-2"
+                            className="font-serif font-bold md:text-1xl text-[12px] bg-white shadow-2xl border-spacing-2"
                            
                             value={status}
                             onChange={(e)=>setStatus(e.target.value)}
@@ -70,7 +73,7 @@ const TaskForm=(props)=>{
                             </select>
                            
             </div>
-            <button className="h-10 w-32 bg-blue-400 rounded cursor-pointer" type="submit" >Add</button>
+            <button className="md:h-10 md:w-32 h-6 w-24 bg-blue-400 rounded cursor-pointer" type="submit" >Add</button>
         </form>
     )
 }
