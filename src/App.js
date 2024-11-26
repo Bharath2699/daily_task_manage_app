@@ -31,11 +31,7 @@ const App=()=>{
       setTasksList([...tasksList,newTask])
   }
 
-  const searchByStatus=(status)=>{
-    const filteredList=tasksList.filter(task=>task.status.toLowerCase()===status.toLowerCase());
-    if(filteredList.length>0){
-      setTasksList(filteredList)}
-  }
+  
 
   return(
   <div className="container h-screen w-screen mx-auto  bg-amber-100 flex flex-col justify-center items-center">
@@ -46,7 +42,7 @@ const App=()=>{
     </div>
     <div className=" h-3/6 w-11/12 bg-cyan-100 flex flex-col px-8 py-4 mt-2">
       <h2 className="md:text-3xl text-xl font-bold text-center " >Tasks List</h2>
-      <TaskList tasksList={tasksList} deleteTask={deleteTask} updateTask={updateTask} searchByStatus={searchByStatus}/>
+      <TaskList tasksList={tasksList} deleteTask={deleteTask} updateTask={updateTask} />
     </div>
   </div>
   )

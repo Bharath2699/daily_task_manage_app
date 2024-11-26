@@ -26,7 +26,7 @@ const TaskForm=(props)=>{
     }
 
     return(
-        <form className="md:w-[85%] md:h-[90%] flex flex-col sm:justify-around" onSubmit={handleSubmit}>
+        <form className="md:w-[85%] md:h-[90%] flex flex-col" onSubmit={handleSubmit}>
             <div className="flex flex-row justify-start m-1" >
                  <label className="font-serif font-bold md:text-1xl text-[12px] md:mr-10 mr-2" id="title">Title : </label>
                             <input 
